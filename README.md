@@ -1,5 +1,5 @@
 # Technical Challenge
-Desafio técnico para uma vaga de Desenvolvedor Full Stack
+Desafio técnico para vaga de Desenvolvedor Full Stack
 
 # Como executar
 * No projeto backend: Faça download do .Net 7.0 sdk e Mongodb Community Server versão 7.0.7, instale os dois e após isso abra um terminal na pasta back e execute dotnet run
