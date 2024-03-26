@@ -63,9 +63,7 @@
       },
       async editTask() {
         try {
-            console.log(this.id)
             const response = await updateTask(this.id, this.title, this.description, this.status);
-            console.log('Tarefa atualizada com sucesso:', response);
         } catch (error) {
             console.error('Erro ao atualizar tarefa:', error);
         }
