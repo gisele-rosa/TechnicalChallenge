@@ -1,0 +1,129 @@
+.body {
+    margin: 0; 
+  }
+  .head {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .head h1 {
+    color: gray;
+  }
+  #app {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+  }
+  li span {
+    flex: 1;
+  }
+  button {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .newTask input {
+        margin-bottom: 10px;
+        border-radius: 5px; 
+        padding: 10px; 
+    }
+
+  .newTask button {
+    background-color: green; 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 16px; 
+    border: none; 
+    cursor: pointer; 
+  }
+
+.newTask button:hover {
+    background-color: darkgreen; 
+}
+
+.status {
+    background-color: yellow; 
+    color: gray; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+}
+
+.edit {
+    background-color: rgb(28, 162, 224); 
+    color: white; 
+    border: none;
+    padding: 8px 16px; 
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: rgb(219, 86, 86); 
+    color: white; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+}
+.modal-content {
+    flex-direction: column;
+  }
+    
+.modal-edit{
+  display: flex;
+}
+      
+.input-row {
+  align-items: center;
+  margin-bottom: 10px;
+}
+      
+.input-row label {
+  margin-right: 10px;
+}
+      
+.input-row input,
+.input-row select {
+  border-radius: 5px;
+  padding: 10px;
+}
+    
+.btn-edit {
+      background-color: green; 
+      color: white; 
+      border-radius: 5px; 
+      padding: 10px 16px; 
+      border: none; 
+      cursor: pointer; 
+  }
+    
+.btn-edit:hover {
+    background-color: darkgreen; 
+}
+    
+.btn-close {
+    background-color: rgb(219, 86, 86); 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 16px; 
+    border: none; 
+    cursor: pointer; 
+}
+    
+.input-row {
+    align-items: center;
+    margin-bottom: 10px;
+}
