@@ -15,10 +15,10 @@ namespace ToDoListAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<DataContext>(provider => 
-                new DataContext(Configuration.GetConnectionString("MongoDBConnection"), 
-                                   Configuration["DatabaseName"]));  
-            services.AddScoped<ToDoService>(); 
+            services.AddSingleton<DataContext>(provider =>
+                new DataContext(Configuration.GetConnectionString("MongoDBConnection"),
+                                   Configuration["DatabaseName"]));
+            services.AddScoped<ToDoService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -34,6 +34,13 @@ namespace ToDoListAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDoListAPI v1"));
             }
+
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+            });
 
             app.UseRouting();
 
