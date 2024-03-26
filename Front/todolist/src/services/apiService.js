@@ -15,7 +15,6 @@ export const getTask = async () => {
 export const getTaskById = async (id) => {
     try {
       const response = await axios.get(`${BASE_URL}/ToDo/${id}`);
-      console.log('response API:', response.data);
       return response.data;
     } catch (error) {
       console.error('Error get data API:', error);
@@ -30,7 +29,6 @@ export const createTask= async(title, description, status) => {
         description: description,
         status: status
       });
-      console.log('response API:', response.data);
       return response.data;
     } catch (error) {
       console.error('Error send data:', error);
@@ -41,7 +39,6 @@ export const createTask= async(title, description, status) => {
   export const deleteTask= async(id) => {
     try {
       const response = await axios.delete(`${BASE_URL}/ToDo/${id}`);
-      console.log('response API:', response.data);
       return response.data;
     } catch (error) {
       console.error('Error delete data:', error);
@@ -57,7 +54,6 @@ export const createTask= async(title, description, status) => {
         description: description,
         status: status
       });
-      console.log('response API:', response.data);
       return response.data;
     } catch (error) {
       console.error('Error update data API:', error);

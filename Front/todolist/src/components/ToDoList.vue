@@ -52,7 +52,6 @@
         try {
           const response = await getTaskById(id);
           this.task = response;
-          console.log('Tarefa recuperada com sucesso:', response);
         } catch (error) {
           console.error('Erro ao buscar tarefa:', error);
         }
@@ -78,7 +77,6 @@
                 this.newTask.description,
                 'pendente'
                 );
-              console.log('Tarefa criada com sucesso:', response);
               this.getToDo();
             } catch (error) {
               console.error('Erro ao criar tarefa:', error);
@@ -87,7 +85,6 @@
         async deleteToDo(id) {
               try {
                 const response = await deleteTask(id);
-                console.log('Tarefa excluída com sucesso:', response);
                 this.getToDo();
               } catch (error) {
                 console.error('Erro ao excluir tarefa:', error);
