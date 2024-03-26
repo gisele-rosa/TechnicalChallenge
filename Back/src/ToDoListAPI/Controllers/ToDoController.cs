@@ -35,7 +35,7 @@ namespace ToDoListAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<TaskItem>> CreateTask(TaskItem taskItem)
+        public async Task<ActionResult<TaskItem>> CreateTask([FromBody] TaskItem taskItem)
         {
             var task = await _toDoService.CreateTaskItem(taskItem);
             if (task == null)
@@ -46,7 +46,7 @@ namespace ToDoListAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> UpdateTask(TaskItem taskItem)
+        public async Task<ActionResult> UpdateTask([FromBody] TaskItem taskItem)
         {
             var updated = await _toDoService.UpdateTaskItem(taskItem);
             if (!updated)
